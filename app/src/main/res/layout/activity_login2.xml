@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="passengersecurity.com.passengersecurity.Login">
+
+    <Button
+        android:id="@+id/rb"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="67dp"
+        android:text="Register" />
+
+    <EditText
+        android:id="@+id/nametxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="38dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:hint="Name" />
+
+    <EditText
+        android:id="@+id/pnrtxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/nametxt"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="15dp"
+        android:ems="10"
+        android:hint="PNR"
+        />
+
+    <EditText
+        android:id="@+id/phonetxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:ems="10"
+        android:hint="Contact No."
+        />
+
+    <EditText
+        android:id="@+id/emailtxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/pnrtxt"
+        android:layout_below="@+id/pnrtxt"
+        android:layout_marginTop="26dp"
+        android:ems="10"
+        android:hint="Email id"
+         />
+
+    <Button
+        android:id="@+id/vb"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/rb"
+        android:layout_alignEnd="@+id/rb"
+        android:layout_marginBottom="30dp"
+        android:text="Validate" />
+</RelativeLayout>
