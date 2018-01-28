@@ -7,7 +7,8 @@ import android.view.View;
 import android.widget.Button;
 
 public class SecondPage extends AppCompatActivity {
-        Button bp,bn;
+    Button bp,bn;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
