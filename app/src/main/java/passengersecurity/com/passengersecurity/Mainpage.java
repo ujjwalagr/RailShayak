@@ -1,10 +1,11 @@
 package passengersecurity.com.passengersecurity;
 
-import android.support.v7.app.AppCompatActivity;
+import android.content.Intent;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.widget.TextView;
 
-import static passengersecurity.com.passengersecurity.Login.s4;
+import java.util.ArrayList;
 
 public class Mainpage extends AppCompatActivity {
     TextView t1,t2,t3,t4;
@@ -21,8 +22,6 @@ public class Mainpage extends AppCompatActivity {
         t2.setText(Login.s2);
         t3.setText(Login.s3);
         t4.setText(Login.s4);
-
-
 
     }
 
