@@ -27,9 +27,9 @@ public class Login extends AppCompatActivity {
         b.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                 s1 = e1.getText().toString();
-                 s2=e2.getText().toString();
-                 s3=e3.getText().toString();
+                s1=e1.getText().toString();
+                s2=e2.getText().toString();
+                s3=e3.getText().toString();
                 s4=e4.getText().toString();
 
                 if(s1.isEmpty())
@@ -42,15 +42,22 @@ public class Login extends AppCompatActivity {
                     Toast.makeText(Login.this, "InValid Phone No.", Toast.LENGTH_SHORT).show();
                 else
                     b1.setEnabled(true);
+                    b1.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        Intent i=new Intent(Login.this,Mainpage.class);
+                        startActivity(i);
+                    }
+                });
             }
         });
-        b1.setOnClickListener(new View.OnClickListener() {
+        /*b1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent i=new Intent(Login.this,Mainpage.class);
                 startActivity(i);
             }
-        });
+        });*/
 
     }
 }
