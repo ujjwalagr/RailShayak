@@ -10,17 +10,19 @@ public class Mainpage extends AppCompatActivity {
     TextView t1,t2,t3,t4;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        t1=findViewById(R.id.nametxt);
-        t2=findViewById(R.id.pnrtxt);
-        t3=findViewById(R.id.mailtext);
-        t4=findViewById(R.id.phonetxt);
         super.onCreate(savedInstanceState);
-
-        t1.setText(Login.s12);
-        t2.setText(Login.s12);
-        t3.setText(Login.s12);
-        t4.setText(Login.s12);
         setContentView(R.layout.activity_mainpage);
+        t1=findViewById(R.id.tname);
+        t2=findViewById(R.id.pnr);
+        t3=findViewById(R.id.mailtext);
+        t4=findViewById(R.id.numtext);
+
+
+        t1.setText(Login.s1);
+        t2.setText(Login.s2);
+        t3.setText(Login.s3);
+        t4.setText(Login.s4);
+
 
 
     }
