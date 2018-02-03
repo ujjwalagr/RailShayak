@@ -8,13 +8,10 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
-import java.util.ArrayList;
-import java.util.List;
-
 public class Login extends AppCompatActivity {
     Button b,b1;
     EditText e1,e2,e3,e4;
-    String s1,s2,s3,s4;
+    static String s1,s2,s3,s4;
 
    @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,9 +27,9 @@ public class Login extends AppCompatActivity {
         b.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                 s1 = e1.getText().toString();
-                 s2=e2.getText().toString();
-                 s3=e3.getText().toString();
+                s1=e1.getText().toString();
+                s2=e2.getText().toString();
+                s3=e3.getText().toString();
                 s4=e4.getText().toString();
 
                 if(s1.isEmpty())
@@ -44,29 +41,17 @@ public class Login extends AppCompatActivity {
                 else if((s4.isEmpty())||(s4.length()!=10)|| !android.util.Patterns.PHONE.matcher(s4).matches())
                     Toast.makeText(Login.this, "InValid Phone No.", Toast.LENGTH_SHORT).show();
                 else
-                {
                     b1.setEnabled(true);
-                }
+                b1.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        Intent i=new Intent(Login.this,Mainpage.class);
+                        startActivity(i);
+                    }
+                });
+            }
+        });
 
-            }
-        });
-        b1.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent i=new Intent(Login.this,Mainpage.class);
-                ArrayList<String> strings = new ArrayList<>();
-                s1=e1.getText().toString();
-                s2=e2.getText().toString();
-                s3=e3.getText().toString();
-                s4=e4.getText().toString();
-                strings.add(s1);
-                strings.add(s2);
-                strings.add(s3);
-                strings.add(s4);
-                i.putStringArrayListExtra("values", strings);
-                startActivity(i);
-            }
-        });
 
     }
 }
