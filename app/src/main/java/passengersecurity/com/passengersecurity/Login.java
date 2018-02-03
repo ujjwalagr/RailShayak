@@ -53,27 +53,8 @@ public class Login extends AppCompatActivity {
                         startActivity(i);
                     }
                 });
-                }
-
             }
-        });
-        /*b1.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent i=new Intent(Login.this,Mainpage.class);
-                ArrayList<String> strings = new ArrayList<>();
-                s1=e1.getText().toString();
-                s2=e2.getText().toString();
-                s3=e3.getText().toString();
-                s4=e4.getText().toString();
-                strings.add(s1);
-                strings.add(s2);
-                strings.add(s3);
-                strings.add(s4);
-                i.putStringArrayListExtra("values", strings);
-                startActivity(i);
-            }
-        });*/
+        });  
 
     }
 }

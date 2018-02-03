@@ -17,7 +17,6 @@ public class Mainpage extends AppCompatActivity {
         t2=findViewById(R.id.pnr);
         t3=findViewById(R.id.mailtext);
         t4=findViewById(R.id.numtext);
-
         t1.setText(Login.s1);
         t2.setText(Login.s2);
         t3.setText(Login.s3);
