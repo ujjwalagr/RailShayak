@@ -8,6 +8,7 @@
 
 
     <TextView
+
         android:id="@+id/textView3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -15,7 +16,8 @@
         android:layout_alignParentTop="true"
         android:layout_marginStart="51dp"
         android:layout_marginTop="83dp"
-        android:text="NAME" />
+        android:text="NAME"
+        android:textSize="18dp" />
 
     <TextView
         android:id="@+id/textView4"
@@ -24,7 +26,8 @@
         android:layout_alignStart="@+id/textView3"
         android:layout_below="@+id/textView3"
         android:layout_marginTop="36dp"
-        android:text="PNR" />
+        android:text="PNR"
+        android:textSize="18dp" />
 
     <TextView
         android:id="@+id/textView5"
@@ -33,7 +36,8 @@
         android:layout_alignStart="@+id/textView4"
         android:layout_below="@+id/textView4"
         android:layout_marginTop="28dp"
-        android:text="Email id" />
+        android:text="Email id"
+        android:textSize="18dp" />
 
     <TextView
         android:id="@+id/textView6"
@@ -42,17 +46,20 @@
         android:layout_alignStart="@+id/textView5"
         android:layout_below="@+id/textView5"
         android:layout_marginTop="25dp"
-        android:text="Phone No." />
+        android:text="Phone No."
+        android:textSize="18dp" />
 
     <TextView
+
         android:id="@+id/tname"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignBaseline="@+id/textView3"
         android:layout_alignBottom="@+id/textView3"
-        android:layout_alignParentEnd="true"
-        android:layout_marginEnd="119dp"
-        android:hint="Fetch" />
+        android:layout_marginStart="97dp"
+        android:layout_toEndOf="@+id/textView6"
+        android:hint="Fetch"
+        android:textSize="18dp" />
 
     <TextView
         android:id="@+id/pnr"
@@ -60,7 +67,8 @@
         android:layout_height="wrap_content"
         android:layout_above="@+id/textView5"
         android:layout_alignStart="@+id/tname"
-        android:text="Fetch" />
+        android:text="Fetch"
+        android:textSize="18dp" />
 
     <TextView
         android:id="@+id/mailtext"
@@ -68,7 +76,8 @@
         android:layout_height="wrap_content"
         android:layout_above="@+id/textView6"
         android:layout_alignStart="@+id/numtext"
-        android:text="Fetch" />
+        android:text="Fetch"
+        android:textSize="18dp" />
 
     <TextView
         android:id="@+id/numtext"
@@ -77,5 +86,6 @@
         android:layout_alignBaseline="@+id/textView6"
         android:layout_alignBottom="@+id/textView6"
         android:layout_alignStart="@+id/pnr"
-        android:text="Fetch" />
+        android:text="Fetch"
+        android:textSize="18dp" />
 </RelativeLayout>
