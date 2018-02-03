@@ -9,9 +9,9 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 public class Login extends AppCompatActivity {
+    static String s1, s2, s3, s4;
     Button b,b1;
     EditText e1,e2,e3,e4;
-    static String s1,s2,s3,s4;
 
    @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,9 +27,9 @@ public class Login extends AppCompatActivity {
         b.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                s1=e1.getText().toString();
-                s2=e2.getText().toString();
-                s3=e3.getText().toString();
+                s1 = e1.getText().toString();
+                s2 = e2.getText().toString();
+                s3 = e3.getText().toString();
                 s4=e4.getText().toString();
 
                 if(s1.isEmpty())
@@ -45,7 +45,7 @@ public class Login extends AppCompatActivity {
                 b1.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View view) {
-                        Intent i=new Intent(Login.this,Mainpage.class);
+                        Intent i = new Intent(Login.this, Mainpage.class);
                         startActivity(i);
                     }
                 });
