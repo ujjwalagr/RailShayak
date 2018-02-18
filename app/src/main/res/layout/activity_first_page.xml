@@ -16,8 +16,8 @@
         android:layout_alignParentBottom="true"
         android:layout_alignParentEnd="true"
         android:layout_marginBottom="34dp"
-        android:background="#fdfdfd"
         android:layout_marginEnd="15dp"
+        android:background="#fdfdfd"
         android:text="NEXT" />
 
     <ImageView
@@ -33,12 +33,12 @@
         android:id="@+id/textView"
         android:layout_width="300dp"
         android:layout_height="200dp"
-        android:fontFamily="cursive"
-        android:textColor="@android:color/white"
-        android:textStyle="bold"
-        android:textSize="27dp"
         android:layout_below="@+id/imageView"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="38dp"
-        android:text="Welcome ! IRCTC presents you a security app that can help you to register the FIR (Online and Offline both) wiih the single click of SOS button." />
+        android:fontFamily="cursive"
+        android:text="Welcome ! IRCTC presents you a security app that can help you to register the FIR (Online and Offline both) wiih the single click of SOS button."
+        android:textColor="@android:color/white"
+        android:textSize="27sp"
+        android:textStyle="bold" />
 </RelativeLayout>

@@ -23,8 +23,8 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="38dp"
         android:ems="10"
-        android:inputType="textPersonName"
-        android:hint="Name" />
+        android:hint="Name"
+        android:inputType="textPersonName" />
 
     <EditText
         android:id="@+id/pnrtxt"
@@ -34,8 +34,7 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="15dp"
         android:ems="10"
-        android:hint="PNR"
-        />
+        android:hint="PNR" />
 
     <EditText
         android:id="@+id/phonetxt"
@@ -44,8 +43,7 @@
         android:layout_centerHorizontal="true"
         android:layout_centerVertical="true"
         android:ems="10"
-        android:hint="Contact No."
-        />
+        android:hint="Contact No." />
 
     <EditText
         android:id="@+id/emailtxt"
@@ -55,8 +53,7 @@
         android:layout_below="@+id/pnrtxt"
         android:layout_marginTop="26dp"
         android:ems="10"
-        android:hint="Email id"
-         />
+        android:hint="Email id" />
 
     <Button
         android:id="@+id/vb"
