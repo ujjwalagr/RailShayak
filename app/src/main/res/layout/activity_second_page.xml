@@ -15,8 +15,8 @@
         android:layout_alignParentBottom="true"
         android:layout_alignParentEnd="true"
         android:layout_marginBottom="19dp"
-        android:background="#fdfdfd"
         android:layout_marginEnd="32dp"
+        android:background="#fdfdfd"
         android:text="LOGIN" />
 
     <Button
@@ -33,19 +33,19 @@
         android:id="@+id/textView2"
         android:layout_width="300dp"
         android:layout_height="200dp"
-        android:fontFamily="cursive"
-        android:textColor="@android:color/white"
-        android:textStyle="bold"
-        android:textSize="27dp"
         android:layout_below="@+id/imageView2"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="45dp"
+        android:fontFamily="cursive"
         android:text="Get Started !!
      Steps:
        1.Validate using PNR.
        2.Once Verified get in
        touch with us.!
-       3.Stay Safe." />
+       3.Stay Safe."
+        android:textColor="@android:color/white"
+        android:textSize="27dp"
+        android:textStyle="bold" />
 
     <ImageView
         android:id="@+id/imageView2"

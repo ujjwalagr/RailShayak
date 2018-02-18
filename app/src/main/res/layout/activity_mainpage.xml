@@ -7,85 +7,36 @@
     tools:context="passengersecurity.com.passengersecurity.Mainpage">
 
 
-    <TextView
-
-        android:id="@+id/textView3"
-        android:layout_width="wrap_content"
+    <Spinner
+        android:id="@+id/complaint"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
-        android:layout_marginStart="51dp"
-        android:layout_marginTop="83dp"
-        android:text="NAME"
-        android:textSize="18dp" />
+        android:layout_marginEnd="20dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="71dp" />
 
-    <TextView
-        android:id="@+id/textView4"
+    <EditText
+        android:id="@+id/description"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:ems="10"
+        android:gravity="top"
+        android:hint="@string/enter_description"
+        android:inputType="textMultiLine"
+        android:paddingEnd="20dp"
+        android:paddingStart="20dp"
+        android:textAlignment="center" />
+
+    <Button
+        android:id="@+id/submit"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignStart="@+id/textView3"
-        android:layout_below="@+id/textView3"
-        android:layout_marginTop="36dp"
-        android:text="PNR"
-        android:textSize="18dp" />
-
-    <TextView
-        android:id="@+id/textView5"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignStart="@+id/textView4"
-        android:layout_below="@+id/textView4"
-        android:layout_marginTop="28dp"
-        android:text="Email id"
-        android:textSize="18dp" />
-
-    <TextView
-        android:id="@+id/textView6"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignStart="@+id/textView5"
-        android:layout_below="@+id/textView5"
-        android:layout_marginTop="25dp"
-        android:text="Phone No."
-        android:textSize="18dp" />
-
-    <TextView
-
-        android:id="@+id/tname"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/textView3"
-        android:layout_alignBottom="@+id/textView3"
-        android:layout_marginStart="97dp"
-        android:layout_toEndOf="@+id/textView6"
-        android:hint="Fetch"
-        android:textSize="18dp" />
-
-    <TextView
-        android:id="@+id/pnr"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_above="@+id/textView5"
-        android:layout_alignStart="@+id/tname"
-        android:text="Fetch"
-        android:textSize="18dp" />
-
-    <TextView
-        android:id="@+id/mailtext"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_above="@+id/textView6"
-        android:layout_alignStart="@+id/numtext"
-        android:text="Fetch"
-        android:textSize="18dp" />
-
-    <TextView
-        android:id="@+id/numtext"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/textView6"
-        android:layout_alignBottom="@+id/textView6"
-        android:layout_alignStart="@+id/pnr"
-        android:text="Fetch"
-        android:textSize="18dp" />
+        android:layout_below="@+id/description"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="39dp"
+        android:text="@string/submit" />
 </RelativeLayout>
