@@ -21,7 +21,7 @@
             <ImageView
                 android:layout_width="1500dp"
                 android:layout_height="110dp"
-                android:src="@drawable/mytrain"
+                android:src="@drawable/train"
 
                 />
 
