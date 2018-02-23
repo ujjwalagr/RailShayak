@@ -32,17 +32,13 @@
     <TextView
         android:id="@+id/textView2"
         android:layout_width="300dp"
-        android:layout_height="200dp"
+        android:layout_height="250dp"
         android:layout_below="@+id/imageView2"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="45dp"
         android:fontFamily="cursive"
-        android:text="Get Started !!
-     Steps:
-       1.Validate using PNR.
-       2.Once Verified get in
-       touch with us.!
-       3.Stay Safe."
+        android:text="@string/get_text"
+
         android:textColor="@android:color/white"
         android:textSize="27dp"
         android:textStyle="bold" />

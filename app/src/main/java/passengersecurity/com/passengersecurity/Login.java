@@ -26,11 +26,9 @@ public class Login extends AppCompatActivity {
         e3=findViewById(R.id.emailtxt);
         e4=findViewById(R.id.phonetxt);
         f=getSharedPreferences("sp",MODE_PRIVATE);
-        //b=findViewById(R.id.vb);
         b1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                //b1.setEnabled(false);
                 SharedPreferences.Editor e = f.edit();
                 s1 = e1.getText().toString();
                 s2 = e2.getText().toString();

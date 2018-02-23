@@ -3,6 +3,13 @@
     <string name="title_activity_login">Sign in</string>
 
     <!-- Strings related to login -->
+    <string name="get_text">
+        Lets Get Started !!"\n"
+        Steps:"\n"
+        1.Validate using PNR.
+        2.Once Verified get in
+          touch with us.!"\n"
+        3.Stay Safe</string>
     <string name="prompt_email">Email</string>
     <string name="prompt_password">Password (optional)</string>
     <string name="action_sign_in">Sign in or register</string>

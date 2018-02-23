@@ -20,6 +20,8 @@ public class Mainpage extends AppCompatActivity {
     Spinner complaint;
     TextView description;
     Button submit;
+    int position = 1;
+
     String name[] = new String[]{"Select an option",
             "Accident Claims",
             "Allotment of seats - berths by train staff",
@@ -60,7 +62,6 @@ public class Mainpage extends AppCompatActivity {
         complaint = findViewById(R.id.complaint);
         description = findViewById(R.id.description);
         submit = findViewById(R.id.submit);
-
         ArrayAdapter<String> arrayAdapter = new ArrayAdapter<>(this, R.layout.support_simple_spinner_dropdown_item, name);
         complaint.setAdapter(arrayAdapter);
 
@@ -68,6 +69,7 @@ public class Mainpage extends AppCompatActivity {
             @Override
             public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
                 complainType = (String) adapterView.getItemAtPosition(i);
+                position = i;
             }
 
             @Override
@@ -79,16 +81,21 @@ public class Mainpage extends AppCompatActivity {
         submit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                StringBuilder sb = new StringBuilder();
-                sb.append("Name - " + Login.s1 + "\n");
-                sb.append("PNR - " + Login.s2 + "\n");
-                sb.append("Complaint type - " + complainType + "\n");
-                String descriptionText = description.getText().toString();
-                sb.append(descriptionText);
-                Uri uri = Uri.parse("smsto:8947848732");
-                Intent intent = new Intent(Intent.ACTION_SENDTO, uri);
-                intent.putExtra("sms_body", sb.toString());
-                startActivity(intent);
+                if (position == 0) {
+                    Toast.makeText(Mainpage.this, "Select an Issue..!", Toast.LENGTH_SHORT).show();
+                } else {
+                    StringBuilder sb = new StringBuilder();
+                    sb.append("Name - " + Login.s1 + "\n");
+                    sb.append("PNR - " + Login.s2 + "\n");
+                    sb.append("Complaint type - " + complainType + "\n");
+                    String descriptionText = description.getText().toString();
+                    sb.append(descriptionText);
+                    Uri uri = Uri.parse("smsto:8947848732");
+                    Intent intent = new Intent(Intent.ACTION_SENDTO, uri);
+                    intent.putExtra("sms_body", sb.toString());
+                    startActivity(intent);
+
+                }
             }
         });
     }

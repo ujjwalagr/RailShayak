@@ -18,7 +18,7 @@ public class SplashScreen extends AppCompatActivity {
         final String pnr = d.getString("k2",null);
         final String email = d.getString("k3",null);
         final String phone = d.getString("k4",null);
-        Toast.makeText(this, "Name="+name+"\n"+"Pnr="+pnr+"\n"+"Email="+email+"\n"+"Phone"+phone+"\n", Toast.LENGTH_SHORT).show();
+        //Toast.makeText(this, "Name="+name+"\n"+"Pnr="+pnr+"\n"+"Email="+email+"\n"+"Phone"+phone+"\n", Toast.LENGTH_SHORT).show();
         Thread th = new Thread() {
             @Override
             public void run() {

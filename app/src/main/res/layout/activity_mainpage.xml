@@ -39,4 +39,31 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="39dp"
         android:text="@string/submit" />
+
+    <TextView
+        android:id="@+id/nameonmain"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignStart="@+id/complaint"
+        android:layout_marginStart="11dp"
+        android:layout_marginTop="23dp"
+        android:text="TextView" />
+
+    <TextView
+        android:id="@+id/pnronmain"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/submit"
+        android:layout_alignTop="@+id/nameonmain"
+        android:text="TextView" />
+
+    <TextView
+        android:id="@+id/seatinfoonmain"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/pnronmain"
+        android:layout_marginStart="23dp"
+        android:layout_toEndOf="@+id/submit"
+        android:text="TextView" />
 </RelativeLayout>

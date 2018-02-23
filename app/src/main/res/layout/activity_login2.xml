@@ -5,8 +5,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:weightSum="2"
     android:orientation="vertical"
+    android:weightSum="2"
     >
     <RelativeLayout
 
@@ -14,10 +14,10 @@
         android:layout_height="match_parent"
         android:background="#ffffff">
         <LinearLayout
-            android:gravity="center_horizontal"
             android:layout_width="match_parent"
-            android:layout_height="600dp"
-            android:background="#007fff">
+            android:layout_height="900dp"
+            android:background="#007fff"
+            android:gravity="center_horizontal">
             <ImageView
                 android:layout_width="1500dp"
                 android:layout_height="110dp"
@@ -29,51 +29,51 @@
         <android.support.v7.widget.CardView
             android:layout_width="350dp"
             android:layout_height="350dp"
-            app:cardCornerRadius="15dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="30dp"
             android:layout_marginTop="120dp"
             android:elevation="30dp"
-            app:cardElevation="20dp"
-            android:layout_marginLeft="30dp"
-            android:layout_centerHorizontal="true">
+            app:cardCornerRadius="15dp"
+            app:cardElevation="20dp">
             <LinearLayout
-                android:orientation="vertical"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="15dp"
-                android:layout_marginRight="15dp">
+                android:layout_marginRight="15dp"
+                android:orientation="vertical">
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="REGISTER"
                     android:fontFamily="monospace"
-                    android:textSize="25dp"
                     android:gravity="center_horizontal"
+                    android:text="REGISTER"
                     android:textColor="@android:color/black"
+                    android:textSize="25dp"
                     />
                 <EditText
                     android:id="@+id/nametxt"
-                    android:drawableLeft="@mipmap/name2"
-                    android:hint="NAME"
-                    android:layout_width="fill_parent"
-                    android:layout_height="fill_parent" />
-                <EditText
-                    android:id="@+id/pnrtxt"
-                    android:drawableLeft="@mipmap/pnr"
-                    android:hint="PNR"
                     android:layout_width="fill_parent"
                     android:layout_height="fill_parent"
+                    android:drawableLeft="@mipmap/name2"
+                    android:hint="NAME" />
+                <EditText
+                    android:id="@+id/pnrtxt"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:drawableLeft="@mipmap/pnr"
+                    android:hint="PNR"
                     />
                 <EditText
                     android:id="@+id/emailtxt"
-                    android:drawableLeft="@mipmap/email"
                     android:layout_width="fill_parent"
                     android:layout_height="fill_parent"
+                    android:drawableLeft="@mipmap/email"
                     android:hint="EMAIL ID"/>
                 <EditText
                     android:id="@+id/phonetxt"
-                    android:drawableLeft="@mipmap/contact"
                     android:layout_width="fill_parent"
                     android:layout_height="fill_parent"
+                    android:drawableLeft="@mipmap/contact"
                     android:hint="CONTACT NUMBER"/>
 
             </LinearLayout>
@@ -83,11 +83,11 @@
         <android.support.v7.widget.CardView
             android:layout_width="150dp"
             android:layout_height="60dp"
-            app:cardBackgroundColor="#007fff"
-            android:layout_marginTop="440dp"
             android:layout_centerHorizontal="true"
-            app:cardCornerRadius="30dp"
+            android:layout_marginTop="440dp"
             android:elevation="20dp"
+            app:cardBackgroundColor="#007fff"
+            app:cardCornerRadius="30dp"
             app:cardElevation="20dp">
 
             <TextView
@@ -104,12 +104,12 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text=""
-            android:textStyle="bold"
-            android:textSize="20dp"
-            android:textColor="#504f4f"
+            android:layout_marginTop="480dp"
             android:gravity="center"
-            android:layout_marginTop="480dp"/>
+            android:text=""
+            android:textColor="#504f4f"
+            android:textSize="20dp"
+            android:textStyle="bold" />
 
     </RelativeLayout>
 
