@@ -1,6 +1,7 @@
 package passengersecurity.com.passengersecurity;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.net.Uri;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -18,9 +19,10 @@ import static passengersecurity.com.passengersecurity.Login.s4;
 
 public class Mainpage extends AppCompatActivity {
     Spinner complaint;
-    TextView description;
+    TextView description, pnronmain, nameonmain, statusonmain;
     Button submit;
     int position = 1;
+    SharedPreferences d1;
 
     String name[] = new String[]{"Select an option",
             "Accident Claims",
@@ -58,10 +60,19 @@ public class Mainpage extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_mainpage);
-
+        d1 = getSharedPreferences("sp", MODE_PRIVATE);
         complaint = findViewById(R.id.complaint);
         description = findViewById(R.id.description);
+        nameonmain = findViewById(R.id.nameonmain);
+        pnronmain = findViewById(R.id.pnronmain);
+        statusonmain = findViewById(R.id.seatinfoonmain);
         submit = findViewById(R.id.submit);
+
+        nameonmain.setText(d1.getString("k1", null));
+        pnronmain.setText(d1.getString("k2", null));
+        statusonmain.setText(d1.getString("k5", null));
+
+
         ArrayAdapter<String> arrayAdapter = new ArrayAdapter<>(this, R.layout.support_simple_spinner_dropdown_item, name);
         complaint.setAdapter(arrayAdapter);
 
@@ -85,8 +96,10 @@ public class Mainpage extends AppCompatActivity {
                     Toast.makeText(Mainpage.this, "Select an Issue..!", Toast.LENGTH_SHORT).show();
                 } else {
                     StringBuilder sb = new StringBuilder();
-                    sb.append("Name - " + Login.s1 + "\n");
-                    sb.append("PNR - " + Login.s2 + "\n");
+                    sb.append("Name - " + d1.getString("k1", null) + "\n");
+                    sb.append("PNR - " + d1.getString("k2", null) + "\n");
+                    sb.append("Contact no-" + d1.getString("k4", null) + "\n");
+                    sb.append("Seat No-" + d1.getString("k5", null) + "\n");
                     sb.append("Complaint type - " + complainType + "\n");
                     String descriptionText = description.getText().toString();
                     sb.append(descriptionText);

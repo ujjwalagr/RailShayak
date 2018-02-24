@@ -48,15 +48,17 @@
         android:layout_alignStart="@+id/complaint"
         android:layout_marginStart="11dp"
         android:layout_marginTop="23dp"
-        android:text="TextView" />
+        android:hint="Name" />
 
     <TextView
         android:id="@+id/pnronmain"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/nameonmain"
+        android:layout_alignBottom="@+id/nameonmain"
         android:layout_alignStart="@+id/submit"
-        android:layout_alignTop="@+id/nameonmain"
-        android:text="TextView" />
+        android:layout_marginStart="13dp"
+        android:hint="Pnr" />
 
     <TextView
         android:id="@+id/seatinfoonmain"
@@ -65,5 +67,5 @@
         android:layout_alignTop="@+id/pnronmain"
         android:layout_marginStart="23dp"
         android:layout_toEndOf="@+id/submit"
-        android:text="TextView" />
+        android:hint="Seat/birth" />
 </RelativeLayout>
