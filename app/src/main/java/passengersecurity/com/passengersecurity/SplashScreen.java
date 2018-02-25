@@ -7,18 +7,19 @@ import android.os.Bundle;
 import android.widget.Toast;
 
 public class SplashScreen extends AppCompatActivity {
-
+    String name, pnr, email, phone, status;
     SharedPreferences d;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash_screen);
-        d=getSharedPreferences("sp",MODE_PRIVATE);
-        final String name = d.getString("k1",null);
-        final String pnr = d.getString("k2",null);
-        final String email = d.getString("k3",null);
-        final String phone = d.getString("k4",null);
-        final String status = d.getString("k5", null);
+        d = getSharedPreferences("sp", MODE_PRIVATE);
+        name = d.getString("k1", null);
+        pnr = d.getString("k2", null);
+        email = d.getString("k3", null);
+        phone = d.getString("k4", null);
+        status = d.getString("k5", null);
         //Toast.makeText(this, "Name="+name+"\n"+"Pnr="+pnr+"\n"+"Email="+email+"\n"+"Phone"+phone+"\n", Toast.LENGTH_SHORT).show();
         Thread th = new Thread() {
             @Override
@@ -27,14 +28,11 @@ public class SplashScreen extends AppCompatActivity {
                     sleep(3000);
                 } catch (Exception h) {
                 } finally {
-                    if (name != null && pnr != null && email != null && phone != null && status != null)
-                    {
-                        Intent i = new Intent(SplashScreen.this, Mainpage.class);
+                    if (name != null && pnr != null && email != null && phone != null && status != null) {
+                        Intent i = new Intent(SplashScreen.this, Home_Screen.class);
                         startActivity(i);
-                    }
-                    else
-                    {
-                        Intent i = new Intent(SplashScreen.this,FirstPage.class);
+                    } else {
+                        Intent i = new Intent(SplashScreen.this, FirstPage.class);
                         startActivity(i);
                     }
 

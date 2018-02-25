@@ -3,9 +3,11 @@ package passengersecurity.com.passengersecurity;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.net.Uri;
-import android.support.v7.app.AppCompatActivity;
+import android.support.v4.app.Fragment;
 import android.os.Bundle;
+import android.view.LayoutInflater;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
@@ -13,11 +15,9 @@ import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import java.util.List;
+import static android.content.Context.MODE_PRIVATE;
 
-import static passengersecurity.com.passengersecurity.Login.s4;
-
-public class Mainpage extends AppCompatActivity {
+public class Mainpage extends Fragment {
     Spinner complaint;
     TextView description, pnronmain, nameonmain, statusonmain;
     Button submit;
@@ -56,24 +56,25 @@ public class Mainpage extends AppCompatActivity {
             "Misc Cause"};
     String complainType;
 
+
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_mainpage);
-        d1 = getSharedPreferences("sp", MODE_PRIVATE);
-        complaint = findViewById(R.id.complaint);
-        description = findViewById(R.id.description);
-        nameonmain = findViewById(R.id.nameonmain);
-        pnronmain = findViewById(R.id.pnronmain);
-        statusonmain = findViewById(R.id.seatinfoonmain);
-        submit = findViewById(R.id.submit);
+        View view = inflater.inflate(R.layout.activity_home__screen, null);
+        d1 = this.getActivity().getSharedPreferences("sp", MODE_PRIVATE);
+        complaint = view.findViewById(R.id.complaint);
+        description = view.findViewById(R.id.description);
+        nameonmain = view.findViewById(R.id.nameonmain);
+        pnronmain = view.findViewById(R.id.pnronmain);
+        statusonmain = view.findViewById(R.id.seatinfoonmain);
+        submit = view.findViewById(R.id.submit);
 
         nameonmain.setText(d1.getString("k1", null));
         pnronmain.setText(d1.getString("k2", null));
         statusonmain.setText(d1.getString("k5", null));
 
 
-        ArrayAdapter<String> arrayAdapter = new ArrayAdapter<>(this, R.layout.support_simple_spinner_dropdown_item, name);
+        ArrayAdapter<String> arrayAdapter = new ArrayAdapter<>(getActivity(), R.layout.support_simple_spinner_dropdown_item, name);
         complaint.setAdapter(arrayAdapter);
 
         complaint.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
@@ -85,7 +86,7 @@ public class Mainpage extends AppCompatActivity {
 
             @Override
             public void onNothingSelected(AdapterView<?> adapterView) {
-                Toast.makeText(Mainpage.this, "Please select an option", Toast.LENGTH_SHORT).show();
+                Toast.makeText(getActivity(), "Please select an option", Toast.LENGTH_SHORT).show();
             }
         });
 
@@ -93,7 +94,7 @@ public class Mainpage extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 if (position == 0) {
-                    Toast.makeText(Mainpage.this, "Select an Issue..!", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getActivity(), "Select an Issue..!", Toast.LENGTH_SHORT).show();
                 } else {
                     StringBuilder sb = new StringBuilder();
                     sb.append("Name - " + d1.getString("k1", null) + "\n");
@@ -111,6 +112,7 @@ public class Mainpage extends AppCompatActivity {
                 }
             }
         });
+        return view;
     }
 
 }
