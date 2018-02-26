@@ -3,6 +3,8 @@ package passengersecurity.com.passengersecurity;
 import android.app.ProgressDialog;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.net.ConnectivityManager;
+import android.net.NetworkInfo;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -58,8 +60,14 @@ public class Login extends AppCompatActivity {
                 else if((s4.isEmpty())||(s4.length()!=10)|| !android.util.Patterns.PHONE.matcher(s4).matches())
                     Toast.makeText(Login.this, "InValid Phone No.", Toast.LENGTH_SHORT).show();
                 else {
-                    getjsondata();
+                    if(check()){
+                    getjsondata();}
+                    else
+                    {
+                        Toast.makeText(Login.this, "Internet Unavailable", Toast.LENGTH_SHORT).show();
+                    }
                 }
+
             }
         });
 
@@ -127,4 +135,24 @@ public class Login extends AppCompatActivity {
         }
 
     }
+    public final boolean check()
+    {
+        ConnectivityManager connectivityManager=(ConnectivityManager)getSystemService(getBaseContext().CONNECTIVITY_SERVICE);
+        if(connectivityManager.getNetworkInfo(0).getState()== NetworkInfo.State.CONNECTED||
+                connectivityManager.getNetworkInfo(0).getState()== NetworkInfo.State.CONNECTING||
+                connectivityManager.getNetworkInfo(1).getState()== NetworkInfo.State.CONNECTING||
+                connectivityManager.getNetworkInfo(1).getState()== NetworkInfo.State.CONNECTED)
+        {
+            return true;
+        }
+        else if(
+            connectivityManager.getNetworkInfo(0).getState()==NetworkInfo.State.DISCONNECTED||
+                    connectivityManager.getNetworkInfo(1).getState()==NetworkInfo.State.DISCONNECTED)
+        {
+            return false;
+        }
+    return false;
+    }
+
 }
+
