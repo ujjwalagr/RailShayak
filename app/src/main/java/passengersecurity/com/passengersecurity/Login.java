@@ -112,7 +112,8 @@ public class Login extends AppCompatActivity {
                 e.putString("k5", mydata);
                 e.commit();
 
-                Intent i = new Intent(Login.this, Mainpage.class);
+               // Intent i = new Intent(Login.this, Mainpage.class);
+                Intent i = new Intent(Login.this, HomeScreen.class);
                 i.putExtra("k", mydata);
                 startActivity(i);
             } else {

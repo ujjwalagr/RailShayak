@@ -1,5 +1,6 @@
 package passengersecurity.com.passengersecurity;
 
+import android.content.SharedPreferences;
 import android.os.Bundle;
 
 import android.support.v4.app.Fragment;
@@ -13,9 +14,14 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.ImageView;
+import android.widget.TextView;
 
 public class HomeScreen extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
+
+    SharedPreferences d1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,7 +29,6 @@ public class HomeScreen extends AppCompatActivity
         setContentView(R.layout.activity_home_screen);
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-
 
         DrawerLayout drawer = findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
@@ -33,6 +38,13 @@ public class HomeScreen extends AppCompatActivity
 
         NavigationView navigationView = findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
+
+        d1 = getSharedPreferences("sp", MODE_PRIVATE);
+        View navHeaderView = navigationView.inflateHeaderView(R.layout.nav_header_home_screen);
+        TextView nameText = navHeaderView.findViewById(R.id.nameText);
+        ImageView img = navHeaderView.findViewById(R.id.imageView);
+        img.setImageResource(R.drawable.mytrain);
+        nameText.setText(d1.getString("k1", null));
     }
 
     @Override

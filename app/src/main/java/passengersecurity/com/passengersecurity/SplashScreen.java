@@ -29,7 +29,8 @@ public class SplashScreen extends AppCompatActivity {
                 } finally {
                     // User is logged in
                     if (name != null && pnr != null && email != null && phone != null && status != null) {
-                        Intent i = new Intent(SplashScreen.this, Mainpage.class);
+                        //Intent i = new Intent(SplashScreen.this, Mainpage.class);
+                        Intent i = new Intent(SplashScreen.this, HomeScreen.class);
                         startActivity(i);
                     }
                     // Not a first time user
