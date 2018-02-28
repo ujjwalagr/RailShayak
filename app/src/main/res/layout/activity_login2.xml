@@ -58,24 +58,22 @@
                     android:layout_width="fill_parent"
                     android:layout_height="fill_parent"
                     android:drawableLeft="@mipmap/name2"
-                    android:hint="NAME" />
-
+                    android:hint="NAME"
+                    android:inputType="textNoSuggestions"/>
                 <EditText
                     android:id="@+id/pnrtxt"
                     android:layout_width="fill_parent"
                     android:layout_height="fill_parent"
                     android:drawableLeft="@mipmap/pnr"
                     android:hint="PNR"
-                    android:inputType="number" />
-
+                    android:inputType="textNoSuggestions"/>
                 <EditText
                     android:id="@+id/emailtxt"
                     android:layout_width="fill_parent"
                     android:layout_height="fill_parent"
                     android:drawableLeft="@mipmap/email"
                     android:hint="EMAIL ID"
-                    android:inputType="textEmailAddress" />
-
+                    android:inputType="textEmailAddress"/>
                 <EditText
                     android:id="@+id/phonetxt"
                     android:layout_width="fill_parent"
@@ -83,7 +81,6 @@
                     android:drawableLeft="@mipmap/contact"
                     android:hint="CONTACT NUMBER"
                     android:inputType="phone" />
-
             </LinearLayout>
 
 
