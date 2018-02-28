@@ -1,10 +1,9 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8" ?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="passengersecurity.com.passengersecurity.Mainpage">
-
+    tools:context="passengersecurity.com.passengersecurity.SendBySMS">
 
     <Spinner
         android:id="@+id/complaint"
@@ -67,4 +66,5 @@
         android:layout_marginStart="23dp"
         android:layout_toEndOf="@+id/submit"
         android:hint="Seat/birth" />
+
 </RelativeLayout>

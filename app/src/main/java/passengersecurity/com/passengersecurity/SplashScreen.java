@@ -4,7 +4,6 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.widget.Toast;
 
 public class SplashScreen extends AppCompatActivity {
     String name, pnr, email, phone, status;
@@ -25,13 +24,16 @@ public class SplashScreen extends AppCompatActivity {
             @Override
             public void run() {
                 try {
-                    sleep(3000);
-                } catch (Exception h) {
+                    sleep(2000);
+                } catch (Exception e) {
                 } finally {
+                    // User is logged in
                     if (name != null && pnr != null && email != null && phone != null && status != null) {
-                        Intent i = new Intent(SplashScreen.this, Home_Screen.class);
+                        Intent i = new Intent(SplashScreen.this, Mainpage.class);
                         startActivity(i);
-                    } else {
+                    }
+                    // Not a first time user
+                    else {
                         Intent i = new Intent(SplashScreen.this, FirstPage.class);
                         startActivity(i);
                     }

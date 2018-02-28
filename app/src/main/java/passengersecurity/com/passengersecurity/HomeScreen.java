@@ -14,13 +14,13 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 
-public class Home_Screen extends AppCompatActivity
+public class HomeScreen extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_home__screen);
+        setContentView(R.layout.activity_home_screen);
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
@@ -48,7 +48,7 @@ public class Home_Screen extends AppCompatActivity
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.home__screen, menu);
+        getMenuInflater().inflate(R.menu.home_screen, menu);
         return true;
     }
 
@@ -75,9 +75,9 @@ public class Home_Screen extends AppCompatActivity
 
         Fragment fragment = null;
         if (id == R.id.tweet_complain) {
-
+            //fragment = new Temp();
         } else if (id == R.id.sms_complain) {
-            fragment = new Mainpage();
+            fragment = new SendBySMS();
         } else if (id == R.id.web_based_complain) {
 
         } else if (id == R.id.open_complains) {
@@ -92,7 +92,6 @@ public class Home_Screen extends AppCompatActivity
         FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
         fragmentTransaction.replace(R.id.fragmentContainer, fragment);
         fragmentTransaction.commit();
-
 
         DrawerLayout drawer = findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);

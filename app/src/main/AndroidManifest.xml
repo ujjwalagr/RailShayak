@@ -23,9 +23,9 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".Home_Screen"
+            android:name=".HomeScreen"
             android:label="@string/title_activity_home__screen"
-            android:theme="@style/AppTheme"></activity>
+            android:theme="@style/AppTheme" />
     </application>
 
 </manifest>

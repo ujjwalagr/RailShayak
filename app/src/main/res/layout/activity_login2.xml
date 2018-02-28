@@ -6,26 +6,27 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:weightSum="2"
-    >
+    android:weightSum="2">
+
     <RelativeLayout
 
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="#ffffff">
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="900dp"
             android:background="#007fff"
             android:gravity="center_horizontal">
+
             <ImageView
                 android:layout_width="1500dp"
                 android:layout_height="110dp"
-                android:src="@drawable/train"
-
-                />
+                android:src="@drawable/train" />
 
         </LinearLayout>
+
         <android.support.v7.widget.CardView
             android:layout_width="350dp"
             android:layout_height="350dp"
@@ -35,12 +36,14 @@
             android:elevation="30dp"
             app:cardCornerRadius="15dp"
             app:cardElevation="20dp">
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="15dp"
                 android:layout_marginRight="15dp"
                 android:orientation="vertical">
+
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -48,38 +51,44 @@
                     android:gravity="center_horizontal"
                     android:text="REGISTER"
                     android:textColor="@android:color/black"
-                    android:textSize="25dp"
-                    />
+                    android:textSize="25dp" />
+
                 <EditText
                     android:id="@+id/nametxt"
                     android:layout_width="fill_parent"
                     android:layout_height="fill_parent"
                     android:drawableLeft="@mipmap/name2"
                     android:hint="NAME" />
+
                 <EditText
                     android:id="@+id/pnrtxt"
                     android:layout_width="fill_parent"
                     android:layout_height="fill_parent"
                     android:drawableLeft="@mipmap/pnr"
                     android:hint="PNR"
-                    />
+                    android:inputType="number" />
+
                 <EditText
                     android:id="@+id/emailtxt"
                     android:layout_width="fill_parent"
                     android:layout_height="fill_parent"
                     android:drawableLeft="@mipmap/email"
-                    android:hint="EMAIL ID"/>
+                    android:hint="EMAIL ID"
+                    android:inputType="textEmailAddress" />
+
                 <EditText
                     android:id="@+id/phonetxt"
                     android:layout_width="fill_parent"
                     android:layout_height="fill_parent"
                     android:drawableLeft="@mipmap/contact"
-                    android:hint="CONTACT NUMBER"/>
+                    android:hint="CONTACT NUMBER"
+                    android:inputType="phone" />
 
             </LinearLayout>
 
 
         </android.support.v7.widget.CardView>
+
         <android.support.v7.widget.CardView
             android:layout_width="150dp"
             android:layout_height="60dp"
@@ -101,6 +110,7 @@
                 android:textStyle="bold" />
 
         </android.support.v7.widget.CardView>
+
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

@@ -5,8 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:context="passengersecurity.com.passengersecurity.Home_Screen"
-    tools:showIn="@layout/app_bar_home__screen">
+    tools:context="passengersecurity.com.passengersecurity.HomeScreen"
+    tools:showIn="@layout/app_bar_home_screen">
 
     <FrameLayout
         android:id="@+id/fragmentContainer"
@@ -14,10 +14,11 @@
         android:layout_height="match_parent"
         android:layout_centerHorizontal="true"
         android:layout_centerVertical="true">
+
         <fragment
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:name="passengersecurity.com.passengersecurity.Mainpage"/>
+            android:name="passengersecurity.com.passengersecurity.SendBySMS"/>
     </FrameLayout>
 
 </RelativeLayout>

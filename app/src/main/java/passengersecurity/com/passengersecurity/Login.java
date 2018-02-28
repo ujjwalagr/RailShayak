@@ -32,19 +32,22 @@ public class Login extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login2);
+
         b1 = findViewById(R.id.sb);
         e1 = findViewById(R.id.nametxt);
         e2 = findViewById(R.id.pnrtxt);
         e3 = findViewById(R.id.emailtxt);
         e4 = findViewById(R.id.phonetxt);
+
         progressDialog = new ProgressDialog(Login.this);
         progressDialog.setMessage("Fetching Details..");
         progressDialog.setCancelable(false);
+
         f = getSharedPreferences("sp", MODE_PRIVATE);
+
         b1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
                 s1 = e1.getText().toString();
                 s2 = e2.getText().toString();
                 s3 = e3.getText().toString();
@@ -63,8 +66,6 @@ public class Login extends AppCompatActivity {
                 }
             }
         });
-
-
     }
 
     public void getjsondata() {
@@ -81,15 +82,13 @@ public class Login extends AppCompatActivity {
             public void onErrorResponse(VolleyError error) {
 
             }
-
         });
+
         RequestQueue q = Volley.newRequestQueue(Login.this);
         q.add(st);
-
     }
 
     public void get_response(String response_obj) {
-
         try {
             JSONObject obj = new JSONObject(response_obj);
 
@@ -97,9 +96,6 @@ public class Login extends AppCompatActivity {
             String c_prep = obj.getString("chart_prepared");
             //Toast.makeText(this, "" + res+"\n"+c_prep, Toast.LENGTH_SHORT).show();
             if (res.equals("200")) {
-
-
-                //String mydata;
                 JSONArray arr = obj.getJSONArray("passengers");
                 JSONObject pos = arr.getJSONObject(0);
                 if (c_prep.equals("true")) {
@@ -116,17 +112,14 @@ public class Login extends AppCompatActivity {
                 e.putString("k5", mydata);
                 e.commit();
 
-                Intent i = new Intent(Login.this, Home_Screen.class);
+                Intent i = new Intent(Login.this, Mainpage.class);
                 i.putExtra("k", mydata);
                 startActivity(i);
             } else {
                 Toast.makeText(this, "Invalid Pnr", Toast.LENGTH_SHORT).show();
             }
-
-
         } catch (Exception r) {
             Toast.makeText(this, "Error=" + r, Toast.LENGTH_SHORT).show();
         }
-
     }
 }
