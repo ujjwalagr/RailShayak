@@ -14,7 +14,6 @@
         <activity android:name=".FirstPage" />
         <activity android:name=".SecondPage" />
         <activity android:name=".Login" />
-        <activity android:name=".Mainpage" />
         <activity android:name=".SplashScreen">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
