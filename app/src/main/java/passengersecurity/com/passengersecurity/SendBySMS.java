@@ -30,6 +30,8 @@ public class SendBySMS extends Fragment {
             "Bribery and Corruption",
             "Catering and Vending Services",
             "Cleanliness at Station",
+            "Sexual Exploitation",
+            "Improper Behaviour Of co-passenger",
             "Complaint related to Sleeper Class",
             "Feedback / Suggestions",
             "Improper behaviour of commercial staff",

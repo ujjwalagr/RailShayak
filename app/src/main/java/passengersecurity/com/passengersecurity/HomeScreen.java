@@ -42,9 +42,14 @@ public class HomeScreen extends AppCompatActivity
         d1 = getSharedPreferences("sp", MODE_PRIVATE);
         View navHeaderView = navigationView.inflateHeaderView(R.layout.nav_header_home_screen);
         TextView nameText = navHeaderView.findViewById(R.id.nameText);
+        TextView pnrText = navHeaderView.findViewById(R.id.pnrtext);
+        TextView seatText = navHeaderView.findViewById(R.id.seatbooking);
         ImageView img = navHeaderView.findViewById(R.id.imageView);
         img.setImageResource(R.drawable.mytrain);
         nameText.setText(d1.getString("k1", null));
+        pnrText.setText(d1.getString("k2", null));
+        seatText.setText(d1.getString("k5", null));
+
     }
 
     @Override
