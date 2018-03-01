@@ -46,6 +46,7 @@ public class HomeScreen extends AppCompatActivity
         TextView seatText = navHeaderView.findViewById(R.id.seatbooking);
         ImageView img = navHeaderView.findViewById(R.id.imageView);
         img.setImageResource(R.drawable.mytrain);
+
         nameText.setText(d1.getString("k1", null));
         pnrText.setText(d1.getString("k2", null));
         seatText.setText(d1.getString("k5", null));
