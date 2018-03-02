@@ -22,10 +22,7 @@ public class WebFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.activity_web_fragment, null);
         wb = view.findViewById(R.id.webview);
-        wb.setInitialScale(1);
         wb.getSettings().setLayoutAlgorithm(WebSettings.LayoutAlgorithm.SINGLE_COLUMN);
-        wb.getSettings().setLoadWithOverviewMode(true);
-        wb.getSettings().setUseWideViewPort(true);
         wb.setScrollBarStyle(WebView.SCROLLBARS_OUTSIDE_OVERLAY);
         wb.setWebViewClient(new myWebClient());
         wb.getSettings().setJavaScriptEnabled(true);
