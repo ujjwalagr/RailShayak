@@ -8,34 +8,34 @@
             <item
                 android:id="@+id/tweet_complain"
                 android:icon="@drawable/twitter"
-                android:title="Tweet" />
+                android:title="Tweet Your Complain" />
             <item
                 android:id="@+id/sms_complain"
                 android:icon="@drawable/sms_com"
-                android:title="SMS" />
+                android:title="SMS Based Complain" />
             <item
                 android:id="@+id/web_based_complain"
                 android:icon="@drawable/internet"
-                android:title="Web based" />
+                android:title="Web based Complain" />
         </menu>
     </item>
 
     <item android:title="Track Status">
         <menu>
             <item
-                android:id="@+id/open_complains"
+                android:id="@+id/webbased"
                 android:icon="@drawable/open_comp"
-                android:title="Open Complains" />
+                android:title="Web Based Complaint" />
             <item
-                android:id="@+id/closed_complains"
+                android:id="@+id/smsbased"
                 android:icon="@drawable/closed_comp"
-                android:title="Closed Complains" />
+                android:title="Sms Based Complaint" />
         </menu>
     </item>
 
     <item
         android:id="@+id/sign_ott"
-        android:title="Sign Out"
-        android:icon="@drawable/sign_out"/>
+        android:icon="@drawable/sign_out"
+        android:title="Sign Out" />
 
 </menu>

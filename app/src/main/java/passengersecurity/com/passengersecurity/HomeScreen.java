@@ -21,6 +21,7 @@ import android.widget.TextView;
 public class HomeScreen extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
+    static int urlid;
     SharedPreferences d1;
 
     @Override
@@ -48,7 +49,7 @@ public class HomeScreen extends AppCompatActivity
         img.setImageResource(R.drawable.mytrain);
 
         nameText.setText(d1.getString("k1", null));
-        pnrText.setText(d1.getString("k2", null));
+        pnrText.setText("Pnr = " + d1.getString("k2", null));
         seatText.setText(d1.getString("k5", null));
 
     }
@@ -95,13 +96,21 @@ public class HomeScreen extends AppCompatActivity
         if (id == R.id.tweet_complain) {
             //fragment = new Temp();
         } else if (id == R.id.sms_complain) {
+
             fragment = new SendBySMS();
         } else if (id == R.id.web_based_complain) {
 
-        } else if (id == R.id.open_complains) {
+            urlid = 1;
+            fragment = new WebFragment();
 
-        } else if (id == R.id.closed_complains) {
+        } else if (id == R.id.webbased) {
 
+            urlid = 2;
+            fragment = new WebFragment();
+        } else if (id == R.id.smsbased) {
+
+            urlid = 3;
+            fragment = new WebFragment();
         } else if (id == R.id.sign_ott) {
 
         }
