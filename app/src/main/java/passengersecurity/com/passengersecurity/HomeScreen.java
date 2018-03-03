@@ -1,6 +1,7 @@
 package passengersecurity.com.passengersecurity;
 
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 
@@ -19,6 +20,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class HomeScreen extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
@@ -128,8 +130,13 @@ public class HomeScreen extends AppCompatActivity
 
             urlid = 3;
             fragment = new WebFragment();
-        } else if (id == R.id.sign_ott) {
+        } else if (id == R.id.sign_out) {
+            d1.edit().clear().apply();
 
+            Toast.makeText(this, "You have been logged out", Toast.LENGTH_SHORT).show();
+            Intent intent = new Intent(HomeScreen.this, Login.class);
+            startActivity(intent);
+            return true;
         }
 
         FragmentManager fragmentManager = getSupportFragmentManager();
