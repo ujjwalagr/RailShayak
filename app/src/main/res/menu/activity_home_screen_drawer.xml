@@ -34,7 +34,7 @@
     </item>
 
     <item
-        android:id="@+id/sign_ott"
+        android:id="@+id/sign_out"
         android:icon="@drawable/sign_out"
         android:title="Sign Out" />
 
