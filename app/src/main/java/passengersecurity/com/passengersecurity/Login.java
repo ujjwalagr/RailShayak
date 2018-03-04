@@ -1,10 +1,12 @@
 package passengersecurity.com.passengersecurity;
 
 import android.app.ProgressDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -26,7 +28,7 @@ public class Login extends AppCompatActivity {
     static String s1, s2, s3, s4;
     TextView b1;
     EditText e1, e2, e3, e4;
-    SharedPreferences f;
+    SharedPreferences sp;
     String mydata;
     ProgressDialog progressDialog;
 
@@ -45,7 +47,7 @@ public class Login extends AppCompatActivity {
         progressDialog.setMessage("Fetching Details..");
         progressDialog.setCancelable(false);
 
-        f = getSharedPreferences("sp", MODE_PRIVATE);
+        sp = getSharedPreferences("sp", MODE_PRIVATE);
 
         b1.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -112,18 +114,25 @@ public class Login extends AppCompatActivity {
                     Toast.makeText(this, "Chart Not Prepared..", Toast.LENGTH_SHORT).show();
                     mydata = "Status=" + pos.getString("booking_status");
                 }
-                SharedPreferences.Editor e = f.edit();
+                SharedPreferences.Editor e = sp.edit();
                 e.putString("k1", s1);
                 e.putString("k2", s2);
                 e.putString("k3", s3);
                 e.putString("k4", s4);
                 e.putString("k5", mydata);
+                e.putString("firstrun", "no");
+                e.putString("signout", "no");
                 e.commit();
 
                // Intent i = new Intent(Login.this, Mainpage.class);
                 Intent i = new Intent(Login.this, HomeScreen.class);
                 i.putExtra("k", mydata);
+//                Toast.makeText(Login.this, ""+sp.getString("k1",null).toString()+"\n"+sp.getString("k2",null).toString()
+//                        +"\n"+sp.getString("k3",null).toString()+"\n"+sp.getString("k4",null).toString()+"\n"+sp.getString("k5",null).toString()
+//                        +"\n"+"signedout=="+String.valueOf(sp.getBoolean("issignout",false))
+//                        +"\n"+"firstexec=="+sp.getBoolean("firstexec",false), Toast.LENGTH_LONG).show();
                 startActivity(i);
+                finish();
             } else {
                 Toast.makeText(this, "Invalid Pnr", Toast.LENGTH_SHORT).show();
             }
@@ -150,5 +159,24 @@ public class Login extends AppCompatActivity {
     return false;
     }
 
+    @Override
+    public void onBackPressed() {
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder.setMessage("Are you sure you want to exit?");
+        builder.setCancelable(false);
+
+        builder.setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+            public void onClick(DialogInterface dialog, int id) {
+                Login.this.finish();
+            }
+        })
+                .setNegativeButton("No", new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int id) {
+                        dialog.cancel();
+                    }
+                });
+        AlertDialog alert = builder.create();
+        alert.show();
+    }
 }
 

@@ -66,7 +66,7 @@
                     android:layout_height="fill_parent"
                     android:drawableLeft="@mipmap/pnr"
                     android:hint="PNR"
-                    android:inputType="textNoSuggestions"/>
+                    android:inputType="number" />
                 <EditText
                     android:id="@+id/emailtxt"
                     android:layout_width="fill_parent"

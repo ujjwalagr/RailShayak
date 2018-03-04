@@ -8,7 +8,6 @@ import android.widget.Button;
 
 public class SecondPage extends AppCompatActivity {
     Button bp, bn;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -27,6 +26,7 @@ public class SecondPage extends AppCompatActivity {
             public void onClick(View view) {
                 Intent i = new Intent(SecondPage.this, Login.class);
                 startActivity(i);
+                finish();
             }
         });
     }

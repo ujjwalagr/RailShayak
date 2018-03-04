@@ -64,13 +64,14 @@ public class HomeScreen extends AppCompatActivity
         if (drawer.isDrawerOpen(GravityCompat.START)) {
             drawer.closeDrawer(GravityCompat.START);
         } else {
+
             AlertDialog.Builder builder = new AlertDialog.Builder(this);
             builder.setMessage("Are you sure you want to exit?");
             builder.setCancelable(false);
-
             builder.setPositiveButton("Yes", new DialogInterface.OnClickListener() {
                 public void onClick(DialogInterface dialog, int id) {
                     HomeScreen.this.finish();
+                    finish();
                 }
             })
                     .setNegativeButton("No", new DialogInterface.OnClickListener() {
@@ -81,6 +82,7 @@ public class HomeScreen extends AppCompatActivity
             AlertDialog alert = builder.create();
             alert.show();
         }
+
     }
 
     @Override
@@ -131,11 +133,19 @@ public class HomeScreen extends AppCompatActivity
             urlid = 3;
             fragment = new WebFragment();
         } else if (id == R.id.sign_out) {
-            d1.edit().clear().apply();
+            d1.edit().putString("k1", null).apply();
+            d1.edit().putString("k2", null).apply();
+            d1.edit().putString("k3", null).apply();
+            d1.edit().putString("k4", null).apply();
+            d1.edit().putString("k5", null).apply();
+            d1.edit().putString("signout", "yes").apply();
+
+
 
             Toast.makeText(this, "You have been logged out", Toast.LENGTH_SHORT).show();
             Intent intent = new Intent(HomeScreen.this, Login.class);
             startActivity(intent);
+            finish();
             return true;
         }
 

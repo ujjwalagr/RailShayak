@@ -36,7 +36,6 @@ public class WebFragment extends Fragment {
         return view;
     }
 
-
     public class myWebClient extends WebViewClient {
 
         @Override
@@ -64,6 +63,7 @@ public class WebFragment extends Fragment {
                 progressDialog.dismiss();
             }
         }
+
     }
 
 }
