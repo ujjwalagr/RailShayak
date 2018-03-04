@@ -10,29 +10,7 @@
 
 
 
-    <!--
-        <ImageView
-            android:id="@+id/imageView"
-            android:layout_width="120dp"
-            android:layout_height="120dp"
-            android:layout_alignParentTop="true"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="32dp"
-            app:srcCompat="@drawable/train1" />
 
-        <TextView
-            android:id="@+id/textView"
-            android:layout_width="300dp"
-            android:layout_height="200dp"
-            android:layout_below="@+id/imageView"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="38dp"
-            android:fontFamily="cursive"
-            android:text="Welcome ! IRCTC presents you a security app that can help you to register the FIR (Online and Offline both) wiih the single click of SOS button."
-            android:textColor="@android:color/white"
-            android:textSize="27sp"
-            android:textStyle="bold" />
-    -->
 
     <ImageView
         android:id="@+id/imageView3"
