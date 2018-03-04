@@ -35,7 +35,7 @@ public class SplashScreen extends AppCompatActivity {
                         startActivity(intent);
                         finish();
                     } else if (firstrun == "yes") {
-                        Intent i = new Intent(SplashScreen.this, FirstPage.class);
+                        Intent i = new Intent(SplashScreen.this, WelcomActivity.class);
                         startActivity(i);
 
                     }

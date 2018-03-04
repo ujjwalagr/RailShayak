@@ -4,52 +4,27 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#007fff"
-    tools:context="passengersecurity.com.passengersecurity.SecondPage">
+    android:background="#F6F6F6">
 
-
-    <Button
-        android:id="@+id/bnn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentEnd="true"
-        android:layout_marginBottom="19dp"
-        android:layout_marginEnd="32dp"
-        android:background="#fdfdfd"
-        android:text="LOGIN" />
-
-    <Button
-        android:id="@+id/bpp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/bnn"
-        android:layout_alignBottom="@+id/bnn"
-        android:layout_alignStart="@+id/textView2"
-        android:background="#fdfdfd"
-        android:text="PREVIOUS" />
-
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="300dp"
-        android:layout_height="250dp"
-        android:layout_below="@+id/imageView2"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="45dp"
-        android:fontFamily="cursive"
-        android:text="@string/get_text"
-
-        android:textColor="@android:color/white"
-        android:textSize="27dp"
-        android:textStyle="bold" />
 
     <ImageView
-        android:id="@+id/imageView2"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
+        android:id="@+id/imageView3"
+        android:layout_width="450dp"
+        android:layout_height="450dp"
+        android:layout_alignParentStart="true"
+        android:layout_centerVertical="true"
+        app:srcCompat="@drawable/finalfir" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="43dp"
-        android:background="@android:color/white"
-        app:srcCompat="@drawable/train2" />
+        android:layout_marginTop="15dp"
+        android:fontFamily="serif"
+        android:text="REPORT FIR"
+        android:textColor="@android:color/black"
+        android:textSize="20dp"
+        android:textStyle="bold" />
 </RelativeLayout>

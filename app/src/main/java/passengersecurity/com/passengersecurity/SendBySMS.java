@@ -22,7 +22,7 @@ public class SendBySMS extends Fragment {
     Button submit;
     int position = 1;
     SharedPreferences d1;
-    String name[] = new String[]{"Select an option",
+    String name[] = new String[]{"Select an issue",
             "Accident Claims",
             "Allotment of seats - berths by train staff",
             "Bedroll Complaints",
@@ -67,7 +67,6 @@ public class SendBySMS extends Fragment {
         pnronmain = view.findViewById(R.id.pnronmain);
         statusonmain = view.findViewById(R.id.seatinfoonmain);
         submit = view.findViewById(R.id.submit);
-
         nameonmain.setText(d1.getString("k1", null));
         pnronmain.setText(d1.getString("k2", null));
         statusonmain.setText(d1.getString("k5", null));
@@ -78,16 +77,15 @@ public class SendBySMS extends Fragment {
         complaint.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
+
                 complainType = (String) adapterView.getItemAtPosition(i);
                 position = i;
             }
-
             @Override
             public void onNothingSelected(AdapterView<?> adapterView) {
                 Toast.makeText(getActivity(), "Please select an option", Toast.LENGTH_SHORT).show();
             }
         });
-
         submit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

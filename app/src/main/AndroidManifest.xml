@@ -12,8 +12,6 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".FirstPage" />
-        <activity android:name=".SecondPage" />
         <activity android:name=".Login" />
         <activity android:name=".SplashScreen">
             <intent-filter>
@@ -26,7 +24,10 @@
             android:name=".HomeScreen"
             android:label="@string/title_activity_home__screen"
             android:theme="@style/AppTheme" />
-        <activity android:name=".WebFragment"></activity>
+        <activity android:name=".WebFragment" />
+        <activity android:name=".WelcomActivity">
+
+        </activity>
     </application>
 
 </manifest>
