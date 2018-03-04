@@ -4,22 +4,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#007fff"
+    android:background="#F6F6F6"
 
     tools:context="passengersecurity.com.passengersecurity.FirstPage">
 
 
-    <Button
-        android:id="@+id/b1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentEnd="true"
-        android:layout_marginBottom="34dp"
-        android:layout_marginEnd="15dp"
-        android:background="#fdfdfd"
-        android:text="NEXT" />
 
+<!--
     <ImageView
         android:id="@+id/imageView"
         android:layout_width="120dp"
@@ -40,5 +31,27 @@
         android:text="Welcome ! IRCTC presents you a security app that can help you to register the FIR (Online and Offline both) wiih the single click of SOS button."
         android:textColor="@android:color/white"
         android:textSize="27sp"
+        android:textStyle="bold" />
+-->
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="450dp"
+        android:layout_height="450dp"
+        android:layout_alignParentStart="true"
+        android:layout_centerVertical="true"
+        app:srcCompat="@drawable/finalogin" />
+
+    <TextView
+        android:fontFamily="serif"
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="15dp"
+        android:text="REGISTER WITH PNR"
+        android:textColor="@android:color/black"
+        android:textSize="20dp"
         android:textStyle="bold" />
 </RelativeLayout>

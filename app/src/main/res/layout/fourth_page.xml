@@ -40,8 +40,8 @@
         android:layout_height="450dp"
         android:layout_alignParentStart="true"
         android:layout_centerVertical="true"
-        app:srcCompat="@drawable/finalfir"
-         />
+        app:srcCompat="@drawable/finalweb"
+        />
 
     <TextView
         android:fontFamily="serif"
@@ -51,7 +51,7 @@
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="15dp"
-        android:text="REPORT FIR"
+        android:text="REPORT FIR THROUGH WEB"
         android:textColor="@android:color/black"
         android:textSize="20dp"
         android:textStyle="bold" />

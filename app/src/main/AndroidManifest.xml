@@ -26,7 +26,10 @@
             android:name=".HomeScreen"
             android:label="@string/title_activity_home__screen"
             android:theme="@style/AppTheme" />
-        <activity android:name=".WebFragment"></activity>
+        <activity android:name=".WebFragment" />
+        <activity android:name=".WelcomActivity">
+
+        </activity>
     </application>
 
 </manifest>
