@@ -80,7 +80,7 @@ public class Login extends AppCompatActivity {
 
     public void getjsondata() {
         progressDialog.show();
-        StringRequest st = new StringRequest(Request.Method.GET, "https://api.railwayapi.com/v2/pnr-status/pnr/" + s2.toString() + "/apikey/4ggslvvmn5/", new Response.Listener<String>() {
+        StringRequest st = new StringRequest(Request.Method.GET, "https://api.railwayapi.com/v2/pnr-status/pnr/" + s2.toString() + "/apikey/2cv4xjncln/", new Response.Listener<String>() {
             @Override
             public void onResponse(String response) {
                 get_response(response);
