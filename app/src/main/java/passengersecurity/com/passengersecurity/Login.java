@@ -123,14 +123,8 @@ public class Login extends AppCompatActivity {
                 e.putString("firstrun", "no");
                 e.putString("signout", "no");
                 e.commit();
-
-               // Intent i = new Intent(Login.this, Mainpage.class);
                 Intent i = new Intent(Login.this, HomeScreen.class);
                 i.putExtra("k", mydata);
-//                Toast.makeText(Login.this, ""+sp.getString("k1",null).toString()+"\n"+sp.getString("k2",null).toString()
-//                        +"\n"+sp.getString("k3",null).toString()+"\n"+sp.getString("k4",null).toString()+"\n"+sp.getString("k5",null).toString()
-//                        +"\n"+"signedout=="+String.valueOf(sp.getBoolean("issignout",false))
-//                        +"\n"+"firstexec=="+sp.getBoolean("firstexec",false), Toast.LENGTH_LONG).show();
                 startActivity(i);
                 finish();
             } else {
