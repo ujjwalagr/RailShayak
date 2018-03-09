@@ -115,7 +115,8 @@ public class HomeScreen extends AppCompatActivity
 
         Fragment fragment = null;
         if (id == R.id.tweet_complain) {
-            //fragment = new Temp();
+           urlid = 4;
+           fragment = new WebFragment();
         } else if (id == R.id.sms_complain) {
 
             fragment = new SendBySMS();
