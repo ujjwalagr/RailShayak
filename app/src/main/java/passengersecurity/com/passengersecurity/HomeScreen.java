@@ -18,6 +18,7 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -115,7 +116,7 @@ public class HomeScreen extends AppCompatActivity
 
         Fragment fragment = null;
         if (id == R.id.tweet_complain) {
-            //fragment = new Temp();
+            fragment = new TweetComplain();
         } else if (id == R.id.sms_complain) {
 
             fragment = new SendBySMS();
@@ -151,6 +152,8 @@ public class HomeScreen extends AppCompatActivity
 
         FragmentManager fragmentManager = getSupportFragmentManager();
         FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+        FrameLayout fragmentContainer = findViewById(R.id.fragmentContainer);
+        fragmentContainer.removeAllViews();
         fragmentTransaction.replace(R.id.fragmentContainer, fragment);
         fragmentTransaction.commit();
 
