@@ -30,6 +30,8 @@ public class WebFragment extends Fragment {
             url = "http://www.coms.indianrailways.gov.in/criscm/common/complaint_search.seam;jsessionid=8EDB483F3F6B7EF67877EA0EFEF61C20.cmsapp3ins3";
         else if (HomeScreen.urlid == 2)
             url = "http://www.coms.indianrailways.gov.in/criscm/common/complaint_search.seam";
+        else if (HomeScreen.urlid == 4)
+            url = "https://twitter.com/RailMinIndia";
         else
             url = "http://www.coms.indianrailways.gov.in/criscm/common/complaint_registration.seam;jsessionid=8EDB483F3F6B7EF67877EA0EFEF61C20.cmsapp3ins3";
         wb.loadUrl(url);
