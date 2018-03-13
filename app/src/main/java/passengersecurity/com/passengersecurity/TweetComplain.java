@@ -93,11 +93,11 @@ public class TweetComplain extends Fragment {
                     Toast.makeText(getActivity(), "Select an Issue..!", Toast.LENGTH_SHORT).show();
                 } else {
                     StringBuilder sb = new StringBuilder();
-                    sb.append("#RailMinIndia\n");
+                    sb.append("@RailMinIndia\n");
                     sb.append("Name - " + d1.getString("k1", null) + "\n");
                     sb.append("PNR - " + d1.getString("k2", null) + "\n");
                     sb.append("Contact no-" + d1.getString("k4", null) + "\n");
-                    sb.append("Seat No-" + d1.getString("k5", null) + "\n");
+                    //sb.append("Seat No-" + d1.getString("k5", null) + "\n");
                     sb.append("Complaint type - " + complainType + "\n");
                     String descriptionText = description.getText().toString();
                     sb.append(descriptionText);
