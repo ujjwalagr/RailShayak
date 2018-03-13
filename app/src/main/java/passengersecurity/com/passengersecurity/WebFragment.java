@@ -24,7 +24,9 @@ public class WebFragment extends Fragment {
         wb = view.findViewById(R.id.webview);
         wb.getSettings().setLayoutAlgorithm(WebSettings.LayoutAlgorithm.SINGLE_COLUMN);
         wb.setScrollBarStyle(WebView.SCROLLBARS_OUTSIDE_OVERLAY);
+        wb.getSettings().setBuiltInZoomControls(true);
         wb.setWebViewClient(new myWebClient());
+
         wb.getSettings().setJavaScriptEnabled(true);
         if (HomeScreen.urlid == 3)
             url = "http://www.coms.indianrailways.gov.in/criscm/common/complaint_search.seam;jsessionid=8EDB483F3F6B7EF67877EA0EFEF61C20.cmsapp3ins3";
