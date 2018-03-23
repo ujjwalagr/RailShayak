@@ -19,17 +19,17 @@ public class WelcomActivity extends AppCompatActivity {
 
     private ViewPager ImageViewPager;
     private int[] layouts;
-    private Button btnSkip, btnNext;
+    private Button btnNext;
     private ViewPager.OnPageChangeListener viewPagerPageChangeListener = new ViewPager.OnPageChangeListener() {
 
         @Override
         public void onPageSelected(int position) {
             if (position == layouts.length - 1) {
                 btnNext.setText(getString(R.string.start));
-                btnSkip.setVisibility(View.GONE);
+                btnNext.setVisibility(View.GONE);
             } else {
                 btnNext.setText(getString(R.string.next));
-                btnSkip.setVisibility(View.VISIBLE);
+                btnNext.setVisibility(View.VISIBLE);
             }
         }
 
@@ -68,32 +68,30 @@ public class WelcomActivity extends AppCompatActivity {
         ImageViewPager = (ViewPager) findViewById(R.id.pager);
         TabLayout tabLayout = (TabLayout) findViewById(R.id.tabDots);
         tabLayout.setupWithViewPager(ImageViewPager, true);
-        btnSkip = (Button) findViewById(R.id.btn_skip);
         btnNext = (Button) findViewById(R.id.btn_next);
         layouts = new int[]{
                 R.layout.activity_first_page,
                 R.layout.activity_second_page,
                 R.layout.third_page,
-                R.layout.fourth_page};
+                R.layout.fourth_page,
+                R.layout.activity_google_login};
 
         MyViewPagerAdapter myViewPagerAdapter = new MyViewPagerAdapter();
         ImageViewPager.setAdapter(myViewPagerAdapter);
         ImageViewPager.addOnPageChangeListener(viewPagerPageChangeListener);
 
-        btnSkip.setOnClickListener(new View.OnClickListener() {
+        /*btnSkip.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 launchHomeScreen();
             }
-        });
+        });*/
+
         btnNext.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // checking for last page
-                // if last page home screen will be launched
                 int current = getItem(1);
                 if (current < layouts.length) {
-                    //  to next screen
                     ImageViewPager.setCurrentItem(current);
                 } else {
                     launchHomeScreen();
