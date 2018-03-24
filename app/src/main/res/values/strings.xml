@@ -34,6 +34,6 @@
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <!-- Welcome Screen-->
     <string name="next">Next</string>
-    <string name="skip">Skip</string>
+    <string name="googlelogin">Next</string>
     <string name="start">Got it</string>
 </resources>
