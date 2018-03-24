@@ -18,6 +18,7 @@ import android.widget.Button;
 public class WelcomActivity extends AppCompatActivity {
 
     private ViewPager ImageViewPager;
+
     private int[] layouts;
     private Button btnNext;
     private ViewPager.OnPageChangeListener viewPagerPageChangeListener = new ViewPager.OnPageChangeListener() {
