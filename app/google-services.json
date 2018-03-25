@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "63636114897",
+    "project_id": "passenger-security-199013"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:63636114897:android:caac1fea1592502b",
+        "android_client_info": {
+          "package_name": "passengersecurity.com.passengersecurity"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "63636114897-ud8a54subm9id4ppn3k9h7grgahmc2v6.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "passengersecurity.com.passengersecurity",
+            "certificate_hash": "d650d28eb636337d3b19d31565fe54e6888c4b96"
+          }
+        },
+        {
+          "client_id": "63636114897-evhf2ak7gk85neqq2a9fd1cjbk6bg6ip.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB06kIbdPVRa9VLYzSzW7jF5c6SX7dR3MM"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 1
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

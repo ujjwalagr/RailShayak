@@ -16,7 +16,6 @@
         <activity android:name=".SplashScreen">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
@@ -24,7 +23,6 @@
             android:name=".HomeScreen"
             android:label="@string/title_activity_home__screen"
             android:theme="@style/AppTheme" />
-        <activity android:name=".WebFragment" />
         <activity android:name=".WelcomActivity" />
         <activity android:name=".GoogleLogin"></activity>
     </application>

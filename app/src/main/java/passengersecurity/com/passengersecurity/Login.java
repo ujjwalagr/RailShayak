@@ -43,11 +43,16 @@ public class Login extends AppCompatActivity {
         e3 = findViewById(R.id.emailtxt);
         e4 = findViewById(R.id.phonetxt);
 
+        e1.setText(String.valueOf(getIntent().getStringExtra("name")), TextView.BufferType.EDITABLE);
+        e3.setText(String.valueOf(getIntent().getStringExtra("email")), TextView.BufferType.EDITABLE);
+
+
         progressDialog = new ProgressDialog(Login.this);
         progressDialog.setMessage("Fetching Details..");
         progressDialog.setCancelable(false);
 
         sp = getSharedPreferences("sp", MODE_PRIVATE);
+
 
         b1.setOnClickListener(new View.OnClickListener() {
             @Override

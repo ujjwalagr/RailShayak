@@ -13,7 +13,7 @@ import android.webkit.WebView;
 import android.webkit.WebViewClient;
 
 public class WebFragment extends Fragment {
-    WebView wb;
+    static WebView wb;
     ProgressDialog progressDialog;
     String url;
 
