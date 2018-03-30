@@ -64,7 +64,7 @@ public class HomeScreen extends AppCompatActivity
 
     @Override
     public void onBackPressed() {
-        DrawerLayout drawer =  findViewById(R.id.drawer_layout);
+        DrawerLayout drawer = findViewById(R.id.drawer_layout);
         if (drawer.isDrawerOpen(GravityCompat.START)) {
             drawer.closeDrawer(GravityCompat.START);
         } else {
@@ -145,11 +145,15 @@ public class HomeScreen extends AppCompatActivity
             d1.edit().putString("signout", "yes").apply();
 
 
-
             Toast.makeText(this, "You have been logged out", Toast.LENGTH_SHORT).show();
             Intent intent = new Intent(HomeScreen.this, Login.class);
             startActivity(intent);
             finish();
+            return true;
+        } else if (id == R.id.add_contact) {
+            Toast.makeText(this, "Contact ", Toast.LENGTH_SHORT).show();
+            Intent intent = new Intent(HomeScreen.this, AddContactFragment.class);
+            startActivity(intent);
             return true;
         }
 

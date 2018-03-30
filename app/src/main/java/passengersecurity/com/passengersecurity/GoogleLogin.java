@@ -57,7 +57,7 @@ public class GoogleLogin extends AppCompatActivity implements View.OnClickListen
             emailget = account.getEmail();
             img_url = account.getPhotoUrl().toString();
             Toast.makeText(this, "Welcome " + nameget, Toast.LENGTH_SHORT).show();
-            Intent intent = new Intent(GoogleLogin.this, Login.class);
+            Intent intent = new Intent(GoogleLogin.this, HomeScreen.class);
             intent.putExtra("name", nameget)
                     .putExtra("urlimg", img_url)
                     .putExtra("email", emailget);
