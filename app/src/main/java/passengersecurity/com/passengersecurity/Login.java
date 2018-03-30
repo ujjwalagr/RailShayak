@@ -14,6 +14,7 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.android.volley.AuthFailureError;
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
 import com.android.volley.Response;
@@ -99,8 +100,13 @@ public class Login extends AppCompatActivity {
             }
         });
 
-        RequestQueue q = Volley.newRequestQueue(Login.this);
-        q.add(st);
+        try {
+            WebServices.getInstance().processRequest(st);
+        } catch (AuthFailureError authFailureError) {
+            authFailureError.printStackTrace();
+        }
+//        RequestQueue q = Volley.newRequestQueue(Login.this);
+//        q.add(st);
     }
 
     public void get_response(String response_obj) {

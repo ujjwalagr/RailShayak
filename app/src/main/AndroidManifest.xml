@@ -2,11 +2,14 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="passengersecurity.com.passengersecurity">
 
+
+    <uses-permission android:name="android.permission.RECEIVE_SMS" />
+    <uses-permission android:name="android.permission.READ_SMS" />
+    <uses-permission android:name="android.permission.READ_CONTACTSC" />
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-    <uses-permission android:name="android.permission.READ_CONTACTS"/>
 
     <application
         android:allowBackup="true"
@@ -28,7 +31,19 @@
             android:theme="@style/AppTheme" />
         <activity android:name=".WelcomActivity" />
         <activity android:name=".GoogleLogin"></activity>
-        <activity android:name=".AddContactFragment"></activity>
+
+        <receiver android:name=".SmsReciever">
+            <intent-filter android:priority="999">
+                <action android:name="android.provider.Telephony.SMS_RECEIVED" />
+            </intent-filter>
+        </receiver>
+        <service
+            android:name=".SmsJobSchedule"
+            android:exported="false" />
+        <provider
+            android:name=".Database.ComplaintProvider"
+            android:authorities="passengersecurity.com.passengersecurity"
+            android:exported="false" />
     </application>
 
 </manifest>
