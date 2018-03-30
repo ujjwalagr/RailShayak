@@ -33,6 +33,12 @@
         </menu>
     </item>
 
+
+    <item
+        android:id="@+id/add_contact"
+        android:title="Add contacts"
+        android:icon="@drawable/ic_person_add_black_24dp"/>
+
     <item
         android:id="@+id/sign_out"
         android:icon="@drawable/sign_out"
