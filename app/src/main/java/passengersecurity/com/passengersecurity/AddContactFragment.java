@@ -13,6 +13,7 @@ import android.support.v4.app.ActivityCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.view.View;
 import android.widget.Toast;
 
 import java.util.ArrayList;
@@ -23,6 +24,7 @@ public class AddContactFragment extends AppCompatActivity {
     private static final long DELAY = 3000;
     RecyclerView rvContacts;
     private Handler handler;
+    List<ContactVO> contactVOList;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,6 +33,7 @@ public class AddContactFragment extends AppCompatActivity {
 
         rvContacts = findViewById(R.id.rvContacts);
 
+        contactVOList = new ArrayList();
 
         handler = new Handler(){
             @Override
@@ -39,7 +42,13 @@ public class AddContactFragment extends AppCompatActivity {
             }
         };
 
-
+        rvContacts.addOnItemTouchListener(
+                new RVItemClickListener(this, new RVItemClickListener.OnItemClickListener() {
+                    @Override
+                    public void onItemClick(View view, int position) {
+                        Toast.makeText(AddContactFragment.this, contactVOList.get(position).getContactName() + " added", Toast.LENGTH_SHORT).show();
+                    }
+                }));
     }
 
 
@@ -52,11 +61,9 @@ public class AddContactFragment extends AppCompatActivity {
 
     private void getAllContacts() {
         Toast.makeText(getApplicationContext(), "contactsCalled", Toast.LENGTH_SHORT).show();
-        List<ContactVO> contactVOList = new ArrayList();
         ContactVO contactVO;
 
         if(getContactReadPermission()) {
-
             ContentResolver contentResolver = getContentResolver();
             Cursor cursor = contentResolver.query(ContactsContract.Contacts.CONTENT_URI, null, null, null, ContactsContract.CommonDataKinds.Phone.DISPLAY_NAME + " ASC");
             if (cursor.getCount() > 0) {
