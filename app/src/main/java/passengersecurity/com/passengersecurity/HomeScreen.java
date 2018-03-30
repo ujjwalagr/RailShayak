@@ -3,6 +3,7 @@ package passengersecurity.com.passengersecurity;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.location.Location;
 import android.os.Bundle;
 
 import android.support.v4.app.Fragment;
@@ -15,6 +16,7 @@ import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.KeyEvent;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -26,16 +28,19 @@ import android.widget.Toast;
 
 import static com.google.android.gms.internal.zzbfq.NULL;
 
-public class HomeScreen extends AppCompatActivity
+public class HomeScreen extends BaseActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
+    private static final String TAG = "HomeScreen" ;
     static int urlid;
     SharedPreferences d1;
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home_screen);
+
+
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
@@ -60,6 +65,11 @@ public class HomeScreen extends AppCompatActivity
         pnrText.setText("Pnr = " + d1.getString("k2", null));
         seatText.setText(d1.getString("k5", null));
 
+        Location location = GPSUtil.getInstance().getLocation();
+        if(location != null) {
+            Log.d(TAG, "Location : "+location.getLatitude() + "," + location.getLongitude());
+            Toast.makeText(this, "Latitude"+location.getLatitude()+"\n"+"Longitude"+location.getLongitude(), Toast.LENGTH_SHORT).show();
+        }
     }
 
     @Override
