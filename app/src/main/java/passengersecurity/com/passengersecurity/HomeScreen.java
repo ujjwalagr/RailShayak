@@ -65,10 +65,13 @@ public class HomeScreen extends BaseActivity
         pnrText.setText("Pnr = " + d1.getString("k2", null));
         seatText.setText(d1.getString("k5", null));
 
-        Location location = GPSUtil.getInstance().getLocation();
+        Location location = GPSUtil.getInstance(this).getLastLocation();
+        //Toast.makeText(this, location.toString(), Toast.LENGTH_SHORT).show();
         if(location != null) {
-            Log.d(TAG, "Location : "+location.getLatitude() + "," + location.getLongitude());
-            Toast.makeText(this, "Latitude"+location.getLatitude()+"\n"+"Longitude"+location.getLongitude(), Toast.LENGTH_SHORT).show();
+            //Log.d(TAG, "Location : "+location.getLatitude() + "," + location.getLongitude());
+            Toast.makeText(this, ""+location.getLatitude()+"\n"+location.getLongitude(), Toast.LENGTH_LONG).show();
+        } else {
+            Toast.makeText(this, "Location is null", Toast.LENGTH_SHORT).show();
         }
     }
 
