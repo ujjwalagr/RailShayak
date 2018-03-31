@@ -1,4 +1,4 @@
-package passengersecurity.com.passengersecurity;
+/*package passengersecurity.com.passengersecurity;
 
 import android.annotation.SuppressLint;
 import android.content.ContentValues;
@@ -14,7 +14,7 @@ import passengersecurity.com.passengersecurity.Database.ComplaintContract;
 /**
  * Created by ujjwal on 30/3/18.
  */
-
+/*
 @SuppressLint("StaticFieldLeak")
 public class DatabaseTask extends AsyncTask {
 
@@ -25,7 +25,7 @@ public class DatabaseTask extends AsyncTask {
     }
 
     @Override
-    protected Object doInBackground(Object[] objects) {
+   /* protected Object doInBackground(Object[] objects) {
         Cursor cursor = context.getContentResolver().query(Uri.parse("content://sms/inbox"), null, null, null, null);
 
         if (cursor.moveToFirst()) { // must check the result to prevent exception
@@ -53,8 +53,8 @@ public class DatabaseTask extends AsyncTask {
             // empty box, no SMS
         }
         return null;
-    }
-
+    }*/
+/*
     @Override
     protected void onPostExecute(Object o) {
         super.onPostExecute(o);
@@ -62,4 +62,4 @@ public class DatabaseTask extends AsyncTask {
         cursor.moveToFirst();
         //Log.i("PNR", cursor.getString(cursor.getColumnIndex("pnr")));
     }
-}
+}*/

@@ -53,7 +53,7 @@ public class BaseActivity extends AppCompatActivity {
         super.onPause();
         unregisterReceiver(deliveryReportReceiver);
     }
-
+/*
     @Override
     public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
         super.onRequestPermissionsResult(requestCode, permissions, grantResults);
@@ -61,5 +61,5 @@ public class BaseActivity extends AppCompatActivity {
             case 444:
                 new DatabaseTask().execute();
         }
-    }
+    }*/
 }

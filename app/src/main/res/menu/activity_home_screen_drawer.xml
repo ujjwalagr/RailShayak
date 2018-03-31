@@ -36,7 +36,7 @@
 
     <item
         android:id="@+id/add_contact"
-        android:title="Add contacts"
+        android:title="Trusted contacts"
         android:icon="@drawable/ic_person_add_black_24dp"/>
 
     <item

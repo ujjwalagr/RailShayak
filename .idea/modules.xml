@@ -3,10 +3,10 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/PassengerSecurity.iml" filepath="$PROJECT_DIR$/PassengerSecurity.iml" />
-      <module fileurl="file://C:\Users\Shivam\Documents\GitHub\Passenger_Security\PassengerSecurity.iml" filepath="C:\Users\Shivam\Documents\GitHub\Passenger_Security\PassengerSecurity.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../../../Shivam/Documents/GitHub/Passenger_Security/PassengerSecurity.iml" filepath="$PROJECT_DIR$/../../../Shivam/Documents/GitHub/Passenger_Security/PassengerSecurity.iml" />
       <module fileurl="file://$PROJECT_DIR$/Passenger_Security.iml" filepath="$PROJECT_DIR$/Passenger_Security.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
-      <module fileurl="file://C:\Users\Shivam\Documents\GitHub\Passenger_Security\app\app.iml" filepath="C:\Users\Shivam\Documents\GitHub\Passenger_Security\app\app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../../../Shivam/Documents/GitHub/Passenger_Security/app/app.iml" filepath="$PROJECT_DIR$/../../../Shivam/Documents/GitHub/Passenger_Security/app/app.iml" />
     </modules>
   </component>
 </project>

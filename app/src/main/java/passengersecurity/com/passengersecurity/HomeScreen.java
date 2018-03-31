@@ -161,7 +161,6 @@ public class HomeScreen extends BaseActivity
             finish();
             return true;
         } else if (id == R.id.add_contact) {
-            Toast.makeText(this, "Contact ", Toast.LENGTH_SHORT).show();
             Intent intent = new Intent(HomeScreen.this, AddContactFragment.class);
             startActivity(intent);
             return true;

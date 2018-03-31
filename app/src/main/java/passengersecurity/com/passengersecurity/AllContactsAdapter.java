@@ -30,8 +30,15 @@ public class AllContactsAdapter extends RecyclerView.Adapter<AllContactsAdapter.
     @Override
     public void onBindViewHolder(ContactViewHolder holder, int position) {
         ContactVO contactVO = contactVOList.get(position);
-        holder.tvContactName.setText(contactVO.getContactName());
-        holder.tvPhoneNumber.setText(contactVO.getContactNumber());
+        if(contactVO.isSelected()) {
+            holder.tvContactName.setText(contactVO.getContactName());
+            holder.tvPhoneNumber.setText(contactVO.getContactNumber());
+            holder.selected.setImageResource(R.drawable.ic_remove_circle_black_24dp);
+        } else {
+            holder.tvContactName.setText(contactVO.getContactName());
+            holder.tvPhoneNumber.setText(contactVO.getContactNumber());
+            holder.selected.setImageResource(R.drawable.ic_add_circle_black_24dp);
+        }
     }
 
     @Override
@@ -44,12 +51,14 @@ public class AllContactsAdapter extends RecyclerView.Adapter<AllContactsAdapter.
         ImageView ivContactImage;
         TextView tvContactName;
         TextView tvPhoneNumber;
+        ImageView selected;
 
         public ContactViewHolder(View itemView) {
             super(itemView);
             ivContactImage = (ImageView) itemView.findViewById(R.id.ivContactImage);
             tvContactName = (TextView) itemView.findViewById(R.id.tvContactName);
             tvPhoneNumber = (TextView) itemView.findViewById(R.id.tvPhoneNumber);
+            selected = itemView.findViewById(R.id.selected);
         }
     }
 }

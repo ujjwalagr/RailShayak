@@ -7,7 +7,14 @@
     <android.support.v7.widget.RecyclerView
         android:id="@+id/rvContacts"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="wrap_content">
     </android.support.v7.widget.RecyclerView>
+
+    <Button
+        android:id="@+id/addSelected"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Add selected"
+        android:layout_alignParentBottom="true"/>
 
 </RelativeLayout>
