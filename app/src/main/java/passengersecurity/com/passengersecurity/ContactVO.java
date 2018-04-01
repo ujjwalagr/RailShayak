@@ -5,6 +5,15 @@ public class ContactVO {
     private String ContactImage;
     private String ContactName;
     private String ContactNumber;
+    private boolean isSelected;
+
+    public boolean isSelected() {
+        return isSelected;
+    }
+
+    public void setSelected(boolean selected) {
+        isSelected = selected;
+    }
 
     public String getContactImage() {
         return ContactImage;
